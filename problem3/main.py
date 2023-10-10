@@ -1,6 +1,11 @@
 def cetak_table_perkalian(number):
     pattern = ""
-    return pattern
+    for i in range(1, number + 1):
+        for j in range(1, number + 1):
+            product = i * j
+            pattern += f"{product:3d}"  # Adjust the width as needed
+        pattern += "\n"
+    print(pattern)
 
 if __name__ == '__main__':
     cetak_table_perkalian(9)

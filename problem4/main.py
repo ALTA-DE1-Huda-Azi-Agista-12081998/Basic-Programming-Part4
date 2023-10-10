@@ -1,6 +1,13 @@
 def ubah_huruf(sentence):
-    pattern = ""
-    return pattern
+    result = ""
+    for char in sentence:
+        if char.isalpha():
+            new_char = chr((ord(char) - ord('A' if char.isupper() else 'a') + 10) % 26 + ord('A' if char.isupper() else 'a'))
+            result += new_char
+        else:
+            result += char
+    return result
+
 
 if __name__ == '__main__':
     print(ubah_huruf("SEPULSA OKE")) # COZEVCK YUO
